@@ -10,16 +10,13 @@ namespace BasicLogical
     {
         public static void Calculate()
         {
-            Console.WriteLine("Enter Year: ");
-            int year = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
 
-            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+            for (int i = 0; i <= num; i++)
             {
-                Console.WriteLine(year + " is leap year");
-            }
-            else
-            {
-                Console.WriteLine(year + " is not leap year");
+                int power = (int)Math.Pow(2, i);
+                Console.WriteLine("2" + " ^ " + i + " = " + power);
             }
 
         }
