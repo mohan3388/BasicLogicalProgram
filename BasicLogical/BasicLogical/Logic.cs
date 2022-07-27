@@ -10,40 +10,17 @@ namespace BasicLogical
     {
         public static void Calculate()
         {
-            int tailCount = 0;
-            int headCount = 0;
+            Console.WriteLine("Enter Year: ");
+            int year = Convert.ToInt32(Console.ReadLine());
 
-            double tailPercentage = 0;
-            double headPercentage = 0;
-
-            Console.WriteLine("Enter number of Flips: ");
-            int Flips = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = 0; i < Flips; i++)
+            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
             {
-                Random random = new Random();
-                int randValue = random.Next(2);
-                Console.WriteLine("Random values: " + randValue);
-                if (randValue == 0)
-                {
-                    Console.WriteLine("Tail");
-                    tailCount++;
-                }
-                else if (randValue == 1)
-                {
-                    Console.WriteLine("Head");
-                    headCount++;
-                }
-                else
-                {
-                    Console.WriteLine("No flips");
-                }
+                Console.WriteLine(year + " is leap year");
             }
-            headPercentage = (headCount * 100) / Flips;
-            tailPercentage = (tailCount * 100) / Flips;
-
-            Console.WriteLine("Percentage of head: " + headPercentage);
-            Console.WriteLine("Percentage of tail: " + tailPercentage);
+            else
+            {
+                Console.WriteLine(year + " is not leap year");
+            }
 
         }
     }
