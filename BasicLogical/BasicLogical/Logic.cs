@@ -10,18 +10,19 @@ namespace BasicLogical
     {
         public static void Calculate()
         {
-            Console.WriteLine("Even Odd Program");
-            Console.WriteLine("Enter number:");
-            int num = Convert.ToInt32(Console.ReadLine());
-            if(num%2==0)
+            Console.WriteLine("Check Vowel Consonent Program");
+            Console.WriteLine("Enter Character:");
+           
+            char ch = Convert.ToChar(Console.ReadLine());
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
             {
-                Console.WriteLine(num+" is even number");
+                Console.WriteLine(ch + " character is vowel");
             }
             else
             {
-                Console.WriteLine(num + " is odd number");
+                Console.WriteLine("Consonent");
             }
-            
+
         }
     }
 }
