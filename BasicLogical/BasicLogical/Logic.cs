@@ -10,15 +10,24 @@ namespace BasicLogical
     {
         public static void Calculate()
         {
-            Console.WriteLine("Enter number: ");
+            int count = 0;
+            Console.WriteLine("Enter a number: ");
             int num = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = 0; i <= num; i++)
+            for (int i = 2; i <= num; i++)
             {
-                int power = (int)Math.Pow(2, i);
-                Console.WriteLine("2" + " ^ " + i + " = " + power);
+               for(int j=1; j<=i; j++)
+                {
+                    if(i%j==0)
+                    {
+                        count++;
+                    }
+                }
+                if(count==2)
+                {
+                    Console.WriteLine(i);
+                }
+                count = 0;
             }
-
         }
     }
 }
