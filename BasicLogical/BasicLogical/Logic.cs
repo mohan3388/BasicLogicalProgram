@@ -10,14 +10,21 @@ namespace BasicLogical
     {
         public static void Calculate()
         {
+           
             Console.WriteLine("Enter number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Before Swapping two numbers");
+            Console.WriteLine("value of num1: "+num1);
+            Console.WriteLine("value of num2: "+num2);
 
-            int Quotient = num / 10;
-            int Reminder = num % 10;
+            num1 = num1 * num2;
+            num2 = num1 / num2;
+            num1 = num1 / num2;
 
-            Console.WriteLine("Quotient is: "+Quotient);
-            Console.WriteLine("Reminder is: "+Reminder);
+            Console.WriteLine("After Swapping two number: ");
+            Console.WriteLine("value of num1: " + num1);
+            Console.WriteLine("value of num2: " + num2);
         }
     }
 }
